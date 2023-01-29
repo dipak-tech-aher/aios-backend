@@ -1,0 +1,178 @@
+{
+    "activities": [
+        {
+            "activityId": 1,
+            "type": "START",
+            "name": "Start of workflow",
+            "filter": [
+                {
+                    "attribute": "problemCode",
+                    "value": ["P1", "P2", "P3"]
+                }
+            ]
+        },
+        {
+            "activityId": 2,
+            "type": "DECISION",
+            "name": "Check problem code and Branch",
+            "condition": [
+                {
+                    "attribute": "problemCode",
+                    "operator": "IN",
+                    "value": ["P1", "P2"],
+                    "transition": "Transition 1"
+                },
+                {
+                    "attribute": "problemCode",
+                    "operator": "IN",
+                    "value": ["P3"],
+                    "transition": "Transition 2"
+                }
+            ]
+        },
+        {
+            "activityId": 3,
+            "type": "ASSIGN",
+            "name": "Assign 1",
+            "entity": [
+                {
+                    "entityId": "dept1.ou.org",
+                    "roleId": [1, 40]
+                },
+                {
+                    "entityId": "dept2.ou.org",
+                    "roleId": [1, 40]
+                }
+            ],
+            "status": ["ASSIGNED", "RETURN"],
+            "userAllowed": true
+        },
+        {
+            "activityId": 4,
+            "type": "ASSIGN",
+            "name": "Assign 2",
+            "entity": [
+                {
+                    "entityId": "dept1.ou.org",
+                    "roleId": [1, 40]
+                },
+                {
+                    "entityId": "dept2.ou.org",
+                    "roleId": [1, 40]
+                }
+            ],
+            "status": ["ASSIGNED", "RETURN"],
+            "userAllowed": true
+        },
+        {
+            "activityId": 5,
+            "type": "DECISION",
+            "name": "Check Status and Branch",
+            "condition": [
+                {
+                    "attribute": "status",
+                    "operator": "=",
+                    "value": "ASSIGNED",
+                    "transition": "Transition 6"
+                },
+                {
+                    "attribute": "status",
+                    "operator": "=",
+                    "value": "RETURN",
+                    "transition": "Transition 7"
+                }
+            ]
+        },
+        {
+            "activityId": 6,
+            "type": "ASSIGN",
+            "name": "Assign 3",
+            "entity": [
+                {
+                    "entityId": "dept1.ou.org",
+                    "role": ["OPS", "SUPERVISOR"]
+                },
+                {
+                    "entityId": "dept4.ou.org",
+                    "role": ["OPS", "SUPERVISOR"]
+                }
+            ],
+            "status": ["PENDING CLOSED"],
+            "userAllowed": true
+        },
+        {
+            "activityId": 7,
+            "type": "ASSIGN",
+            "name": "Assign 4",
+            "entity": [
+                {
+                    "entityId": "dept1.ou.org",
+                    "roleId": [1, 40]
+                }
+            ],
+            "status": ["PENDING CLOSED"],
+            "userAllowed": true
+        },
+        {
+            "activityId": 8,
+            "type": "END",
+            "name": "Close SR"
+        }
+    ],
+    "transitions": [
+        {
+            "transitionId": 1,
+            "name": "Transition 1",
+            "from": "Start of workflow",
+            "to": "Check problem code and Branch"
+        },
+        {
+            "transitionId": 2,
+            "name": "Transition 2",
+            "from": "Check problem code and Branch",
+            "to": "Assign 1"
+        },
+        {
+            "transitionId": 3,
+            "name": "Transition 3",
+            "from": "Check problem code and Branch",
+            "to": "Assign 2"
+        },
+        {
+            "transitionId": 4,
+            "name": "Transition 4",
+            "from": "Assign 1",
+            "to": "Check Status and Branch"
+        },
+        {
+            "transitionId": 5,
+            "name": "Transition 5",
+            "from": "Assign 2",
+            "to": "Check Status and Branch"
+        },
+        {
+            "transitionId": 6,
+            "name": "Transition 6",
+            "from": "Check Status and Branch",
+            "to": "Assign 3"
+        },
+        {
+            "transitionId": 7,
+            "name": "Transition 7",
+            "from": "Check Status and Branch",
+            "to": "Assign 4"
+        },
+        {
+            "transitionId": 8,
+            "name": "Transition 8",
+            "from": "Assign 3",
+            "to": "Close SR"
+        },
+        {
+            "transitionId": 9,
+            "name": "Transition 9",
+            "from": "Assign 4",
+            "to": "Close SR"
+        }
+    ]
+}

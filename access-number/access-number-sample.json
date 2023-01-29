@@ -1,0 +1,197 @@
+{
+    "statusCode": "SUCCESS-001",
+    "statusMsg": "Success",
+    "accessNumberDetails":    
+    [
+        {
+          "accessNumber": "7435626",
+          "status": "UNALLOCATED",
+          "category": ""
+        },
+        {
+          "accessNumber": "7435654",
+          "status": "UNALLOCATED",
+          "category": ""
+        },
+             {
+          "accessNumber": "7435628",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7220702",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7213694",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7222062",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7221097",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7218324",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7215103",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7219504",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7221919",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7218466",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7221531",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7221177",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7214181",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7213613",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7218395",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7217975",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7216974",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7213247",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7214945",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7220220",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7215110",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7214998",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7216040",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7218535",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7216182",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7216938",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7215789",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7221035",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7214129",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7213297",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7214660",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7220421",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7218504",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7215980",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7217688",
+          "status": "UNALLOCATED",
+          "category": ""
+       },
+             {
+          "accessNumber": "7217941",
+          "status": "UNALLOCATED",
+          "category": ""
+       }
+    ]
+ }

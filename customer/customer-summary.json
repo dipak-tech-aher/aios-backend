@@ -1,0 +1,1106 @@
+{
+    "statusCode": "string",
+    "statusMsg": "string",
+    "customerSummary": {
+        "return": {
+            "nodeOutageItem": [
+                {
+                    "serviceType": "string",
+                    "lastUpdatedBy": "string",
+                    "nodeOutageUid": "string",
+                    "closureReasonCd": "string",
+                    "nodeDescription": "string",
+                    "networkNodeId": "string",
+                    "nodeOwner": "string",
+                    "createdDate": "string",
+                    "accessNumber": "string",
+                    "closedDate": "string",
+                    "expectedResolutionDate": "string",
+                    "equipUid": "string",
+                    "noOfOpenTickets": "string",
+                    "outageNotes": "string",
+                    "severityCd": "string",
+                    "networkNodeUid": "string"
+                }
+            ],
+            "applicabilityGrants": {
+                "applicabilityItem": [
+                    {
+                        "value": "string",
+                        "typeCode": "string"
+                    }
+                ]
+            },
+            "accountSummary": {
+                "tosReason": "string",
+                "accountFinancialItem": {
+                    "billingRelations": "string",
+                    "currentBalance": {
+                        "itemised": "string",
+                        "id": "string",
+                        "value": "string"
+                    },
+                    "highSpendCreditLimit": {
+                        "itemised": "string",
+                        "id": "string",
+                        "value": "string"
+                    },
+                    "prePaymentBalance": {
+                        "itemised": "string",
+                        "id": "string",
+                        "value": "string"
+                    },
+                    "depositInsure": "string",
+                    "ledgerBalance": {
+                        "itemised": "string",
+                        "id": "string",
+                        "value": "string"
+                    },
+                    "taxSchemeCode": "string",
+                    "checkBill": "string",
+                    "disputedBalance": {
+                        "itemised": "string",
+                        "id": "string",
+                        "value": "string"
+                    },
+                    "lastPaymentDate": "string",
+                    "creditLimit": {
+                        "itemised": "string",
+                        "id": "string",
+                        "value": "string"
+                    },
+                    "lastPayment": {
+                        "itemised": "string",
+                        "id": "string",
+                        "value": "string"
+                    },
+                    "billCycleCode": "string",
+                    "basicCollectionPlanCode": "string",
+                    "discountGroupCode": "string",
+                    "creditRating": "string"
+                },
+                "billNextDate": "string",
+                "creditCardType": "string",
+                "faultPriority": "string",
+                "communicationConsent": [
+                    "string"
+                ],
+                "correspondenceAddress": {
+                    "informalAddress": "string",
+                    "extension": "string",
+                    "organizationName": "string",
+                    "pcode": "string",
+                    "streetNo": "string",
+                    "dpid": "string",
+                    "uid": "string",
+                    "streetName": "string",
+                    "networkNodeIds": [
+                        {
+                            "ownerDeptCd": "string",
+                            "available": "string",
+                            "networkNodeUid": "string",
+                            "nodeId": "string"
+                        }
+                    ],
+                    "externalAddressUid": "string",
+                    "flatNo": "string",
+                    "areaName": "string",
+                    "addressLookupKey": "string",
+                    "addressLine1": "string",
+                    "addressLine2": "string",
+                    "manuallyEditedYn": "string",
+                    "postCode": "string",
+                    "countryName": "string",
+                    "entrance": "string",
+                    "placeName": "string",
+                    "addressProfileUid": "string",
+                    "key": "string",
+                    "exchangeCode": "string"
+                },
+                "firstSalesPerson": "string",
+                "lastBillUid": "string",
+                "taxSchemeCode": "string",
+                "tradingAs": "string",
+                "accountGroupCd": "string",
+                "thisAccountIsPaidForByAnotherAccount": "string",
+                "identificationFields": {
+                    "id3Label": "string",
+                    "id3Value": "string",
+                    "id5Value": "string",
+                    "id2Label": "string",
+                    "id4Label": "string",
+                    "id4Value": "string",
+                    "id1Label": "string",
+                    "id1Value": "string",
+                    "id2Value": "string",
+                    "id5Label": "string"
+                },
+                "accountClassCode": "string",
+                "altCurrencyCode": "string",
+                "creditCardHolderName": "string",
+                "latestSalesPersonInternal": "string",
+                "companyRegisteredAddress": {
+                    "informalAddress": "string",
+                    "extension": "string",
+                    "organizationName": "string",
+                    "pcode": "string",
+                    "streetNo": "string",
+                    "dpid": "string",
+                    "uid": "string",
+                    "streetName": "string",
+                    "networkNodeIds": [
+                        {
+                            "ownerDeptCd": "string",
+                            "available": "string",
+                            "networkNodeUid": "string",
+                            "nodeId": "string"
+                        }
+                    ],
+                    "externalAddressUid": "string",
+                    "flatNo": "string",
+                    "areaName": "string",
+                    "addressLookupKey": "string",
+                    "addressLine1": "string",
+                    "addressLine2": "string",
+                    "manuallyEditedYn": "string",
+                    "postCode": "string",
+                    "countryName": "string",
+                    "entrance": "string",
+                    "placeName": "string",
+                    "addressProfileUid": "string",
+                    "key": "string",
+                    "exchangeCode": "string"
+                },
+                "marketingQuestions": "string",
+                "employeeCountRange": "string",
+                "externalReference": "string",
+                "fcaShareProfileCode": "string",
+                "lastShippingAddress": {
+                    "informalAddress": "string",
+                    "extension": "string",
+                    "organizationName": "string",
+                    "pcode": "string",
+                    "streetNo": "string",
+                    "dpid": "string",
+                    "uid": "string",
+                    "streetName": "string",
+                    "networkNodeIds": [
+                        {
+                            "ownerDeptCd": "string",
+                            "available": "string",
+                            "networkNodeUid": "string",
+                            "nodeId": "string"
+                        }
+                    ],
+                    "externalAddressUid": "string",
+                    "flatNo": "string",
+                    "areaName": "string",
+                    "addressLookupKey": "string",
+                    "addressLine1": "string",
+                    "addressLine2": "string",
+                    "manuallyEditedYn": "string",
+                    "postCode": "string",
+                    "countryName": "string",
+                    "entrance": "string",
+                    "placeName": "string",
+                    "addressProfileUid": "string",
+                    "key": "string",
+                    "exchangeCode": "string"
+                },
+                "promotionalLiterature": "string",
+                "jointAccountHolders": "string",
+                "name": {
+                    "forenamesInitials": "string",
+                    "surnameCompanyName": "string",
+                    "honours": "string",
+                    "middleName": "string",
+                    "title": "string"
+                },
+                "channelTypeCd": "string",
+                "statusCode": "string",
+                "firstSalesPersonInternal": "string",
+                "userDefinedFieldSet": [
+                    {
+                        "fieldName": "string",
+                        "hidden": "string",
+                        "available": "string",
+                        "fieldValue": {
+                            "dateValue": "string",
+                            "variantType": "string",
+                            "stringValue": "string",
+                            "currencyValue": {
+                                "itemised": "string",
+                                "id": "string",
+                                "value": "string"
+                            },
+                            "intValue": "string",
+                            "booleanValue": "string",
+                            "doubleValue": "string"
+                        },
+                        "key": "string"
+                    }
+                ],
+                "bankName": "string",
+                "accountSubGroupCd": "string",
+                "billLanguageCode": "string",
+                "accountCategoryCode": "string",
+                "billMediaCode": "string",
+                "accountCreationDate": "string",
+                "dpConsentYn": {
+                    "dateValue": "string",
+                    "variantType": "string",
+                    "stringValue": "string",
+                    "currencyValue": {
+                        "itemised": "string",
+                        "id": "string",
+                        "value": "string"
+                    },
+                    "intValue": "string",
+                    "booleanValue": "string",
+                    "doubleValue": "string"
+                },
+                "accountNo": "string",
+                "tos": "string",
+                "accountReviewDate": "string",
+                "key": "string",
+                "accountCurrencyCode": "string",
+                "latestSalesPerson": "string",
+                "referenceNo": "string",
+                "payerAccountNo": "string",
+                "accountSubGroupCode": "string",
+                "serviceAddress": {
+                    "informalAddress": "string",
+                    "extension": "string",
+                    "organizationName": "string",
+                    "pcode": "string",
+                    "streetNo": "string",
+                    "dpid": "string",
+                    "uid": "string",
+                    "streetName": "string",
+                    "networkNodeIds": [
+                        {
+                            "ownerDeptCd": "string",
+                            "available": "string",
+                            "networkNodeUid": "string",
+                            "nodeId": "string"
+                        }
+                    ],
+                    "externalAddressUid": "string",
+                    "flatNo": "string",
+                    "areaName": "string",
+                    "addressLookupKey": "string",
+                    "addressLine1": "string",
+                    "addressLine2": "string",
+                    "manuallyEditedYn": "string",
+                    "postCode": "string",
+                    "countryName": "string",
+                    "entrance": "string",
+                    "placeName": "string",
+                    "addressProfileUid": "string",
+                    "key": "string",
+                    "exchangeCode": "string"
+                },
+                "supportContract": {
+                    "contractNo": "string",
+                    "contractVer": "string"
+                },
+                "billLastDate": "string",
+                "thisAccountPaysForAnotherAccount": "string",
+                "billingAddress": {
+                    "informalAddress": "string",
+                    "extension": "string",
+                    "organizationName": "string",
+                    "pcode": "string",
+                    "streetNo": "string",
+                    "dpid": "string",
+                    "uid": "string",
+                    "streetName": "string",
+                    "networkNodeIds": [
+                        {
+                            "ownerDeptCd": "string",
+                            "available": "string",
+                            "networkNodeUid": "string",
+                            "nodeId": "string"
+                        }
+                    ],
+                    "externalAddressUid": "string",
+                    "flatNo": "string",
+                    "areaName": "string",
+                    "addressLookupKey": "string",
+                    "addressLine1": "string",
+                    "addressLine2": "string",
+                    "manuallyEditedYn": "string",
+                    "postCode": "string",
+                    "countryName": "string",
+                    "entrance": "string",
+                    "placeName": "string",
+                    "addressProfileUid": "string",
+                    "key": "string",
+                    "exchangeCode": "string"
+                },
+                "relations": "string"
+            },
+            "primaryContactDetail": {
+                "officeName": "string",
+                "contactUid": "string",
+                "companyName": "string",
+                "emailAddress1": "string",
+                "userDefinedFieldSet": [
+                    {
+                        "fieldName": "string",
+                        "hidden": "string",
+                        "available": "string",
+                        "fieldValue": {
+                            "dateValue": "string",
+                            "variantType": "string",
+                            "stringValue": "string",
+                            "currencyValue": {
+                                "itemised": "string",
+                                "id": "string",
+                                "value": "string"
+                            },
+                            "intValue": "string",
+                            "booleanValue": "string",
+                            "doubleValue": "string"
+                        },
+                        "key": "string"
+                    }
+                ],
+                "emailAddress2": "string",
+                "accountSubGroupCd": "string",
+                "idNumber": "string",
+                "phoneNumbers": [
+                    {
+                        "phoneTypeCd": "string",
+                        "phoneNumber": "string"
+                    }
+                ],
+                "correspondenceAddress": {
+                    "informalAddress": "string",
+                    "extension": "string",
+                    "organizationName": "string",
+                    "pcode": "string",
+                    "streetNo": "string",
+                    "dpid": "string",
+                    "uid": "string",
+                    "streetName": "string",
+                    "networkNodeIds": {
+                        "ownerDeptCd": "string",
+                        "available": "string",
+                        "networkNodeUid": "string",
+                        "nodeId": "string"
+                    },
+                    "externalAddressUid": "string",
+                    "flatNo": "string",
+                    "areaName": "string",
+                    "addressLookupKey": "string",
+                    "addressLine1": "string",
+                    "addressLine2": "string",
+                    "manuallyEditedYn": "string",
+                    "postCode": "string",
+                    "countryName": "string",
+                    "entrance": "string",
+                    "placeName": "string",
+                    "addressProfileUid": "string",
+                    "key": "string",
+                    "exchangeCode": "string"
+                },
+                "maritalStatusCode": "string",
+                "password": "string",
+                "dpConsentYn": {
+                    "dateValue": "string",
+                    "variantType": "string",
+                    "stringValue": "string",
+                    "currencyValue": {
+                        "itemised": "string",
+                        "id": "string",
+                        "value": "string"
+                    },
+                    "intValue": "string",
+                    "booleanValue": "string",
+                    "doubleValue": "string"
+                },
+                "isLocked": {
+                    "dateValue": "string",
+                    "variantType": "string",
+                    "stringValue": "string",
+                    "currencyValue": {
+                        "itemised": "string",
+                        "id": "string",
+                        "value": "string"
+                    },
+                    "intValue": "string",
+                    "booleanValue": "string",
+                    "doubleValue": "string"
+                },
+                "accountGroupCd": "string",
+                "key": "string",
+                "departmentName": "string",
+                "fileReferenceNo": "string",
+                "personTypeCode": "string",
+                "birthDate": "string",
+                "genderCode": "string",
+                "name": {
+                    "forenamesInitials": "string",
+                    "surnameCompanyName": "string",
+                    "honours": "string",
+                    "middleName": "string",
+                    "title": "string"
+                },
+                "position": "string",
+                "information1": "string",
+                "information2": "string"
+            },
+            "locale": "string",
+            "customerSummary": {
+                "contactUid": "string",
+                "hierarchy": "string",
+                "userDefinedFieldSet": [
+                    {
+                        "fieldName": "string",
+                        "hidden": "string",
+                        "available": "string",
+                        "fieldValue": {
+                            "dateValue": "string",
+                            "variantType": "string",
+                            "stringValue": "string",
+                            "currencyValue": {
+                                "itemised": "string",
+                                "id": "string",
+                                "value": "string"
+                            },
+                            "intValue": "string",
+                            "booleanValue": "string",
+                            "doubleValue": "string"
+                        },
+                        "key": "string"
+                    }
+                ],
+                "class2CategoryCode": "string",
+                "accountSubGroupCd": "string",
+                "correspondenceAddress": {
+                    "informalAddress": "string",
+                    "extension": "string",
+                    "organizationName": "string",
+                    "pcode": "string",
+                    "streetNo": "string",
+                    "dpid": "string",
+                    "uid": "string",
+                    "streetName": "string",
+                    "networkNodeIds": [
+                        {
+                            "ownerDeptCd": "string",
+                            "available": "string",
+                            "networkNodeUid": "string",
+                            "nodeId": "string"
+                        }
+                    ],
+                    "externalAddressUid": "string",
+                    "flatNo": "string",
+                    "areaName": "string",
+                    "addressLookupKey": "string",
+                    "addressLine1": "string",
+                    "addressLine2": "string",
+                    "manuallyEditedYn": "string",
+                    "postCode": "string",
+                    "countryName": "string",
+                    "entrance": "string",
+                    "placeName": "string",
+                    "addressProfileUid": "string",
+                    "key": "string",
+                    "exchangeCode": "string"
+                },
+                "class1TypeCode": "string",
+                "customerUid": "string",
+                "dpConsentYn": {
+                    "dateValue": "string",
+                    "variantType": "string",
+                    "stringValue": "string",
+                    "currencyValue": {
+                        "itemised": "string",
+                        "id": "string",
+                        "value": "string"
+                    },
+                    "intValue": "string",
+                    "booleanValue": "string",
+                    "doubleValue": "string"
+                },
+                "phoneNumber": [
+                    {
+                        "phoneTypeCd": "string",
+                        "phoneNumber": "string"
+                    }
+                ],
+                "class3ClassCode": "string",
+                "name": {
+                    "forenamesInitials": "string",
+                    "surnameCompanyName": "string",
+                    "honours": "string",
+                    "middleName": "string",
+                    "title": "string"
+                },
+                "importanceCode": "string",
+                "noOfAccounts": "string",
+                "accountGroupCd": "string",
+                "importanceReason": "string",
+                "relations": "string",
+                "email": "string",
+                "key": "string",
+                "statusCode": "string"
+            },
+            "responseCode": "string",
+            "customerStatus": "string",
+            "accountStatus": "string",
+            "newAlert": "string",
+            "serviceSummary": {
+                "costingStartDate": "string",
+                "serviceCharges": [
+                    {
+                        "billingFrequency": "string",
+                        "netAmount": {
+                            "itemised": "string",
+                            "id": "string",
+                            "value": "string"
+                        },
+                        "isTaxInclusive": "string",
+                        "thirdPartyCode": "string",
+                        "statusCd": "string",
+                        "grossAmount": {
+                            "itemised": "string",
+                            "id": "string",
+                            "value": "string"
+                        },
+                        "chargeUid": "string",
+                        "suffix": "string",
+                        "taxAmount": {
+                            "itemised": "string",
+                            "id": "string",
+                            "value": "string"
+                        },
+                        "tppUid": "string",
+                        "lineLength": "string",
+                        "version": "string"
+                    }
+                ],
+                "lastInstallationDate": "string",
+                "tariffCode": "string",
+                "serviceCode": "string",
+                "portingDetails": {
+                    "portingActivityHistory": [
+                        {
+                            "requestType": "string",
+                            "eventUid": "string",
+                            "mmlCommandUid": "string",
+                            "donorOpCd": "string",
+                            "nprId": "string",
+                            "accessNo": "string",
+                            "accountNumber": "string",
+                            "custName": "string",
+                            "idNumber": "string",
+                            "lastModifiedDtm": "string",
+                            "woNo": "string",
+                            "knowledgeSessionUid": "string",
+                            "portingActivityUid": "string",
+                            "recptOpCd": "string",
+                            "primeUid": "string",
+                            "portStatusCd": "string",
+                            "requestDate": "string",
+                            "equipUid": "string",
+                            "simNumber": "string"
+                        }
+                    ],
+                    "requestDt": "string",
+                    "requestType": "string",
+                    "eventUid": "string",
+                    "recipientOpCd": "string",
+                    "mmlCommandUid": "string",
+                    "donorOpCd": "string",
+                    "nprId": "string",
+                    "accessNo": "string",
+                    "customerName": "string",
+                    "woNo": "string",
+                    "emailAddress": "string",
+                    "phoneNumber": "string",
+                    "portingUser": "string",
+                    "knowledgeSessionUid": "string",
+                    "portingActivityUid": "string",
+                    "accountNo": "string",
+                    "customerId": "string",
+                    "action": "string",
+                    "equipUid": "string",
+                    "portingId": "string",
+                    "simNumber": "string",
+                    "portingOpCd": "string",
+                    "status": "string"
+                },
+                "ddiRanges": [
+                    {
+                        "groupName": "string",
+                        "rangeQuantity": "string",
+                        "lineTypeCd": "string",
+                        "numberRangeTypeCd": "string",
+                        "exchangeCd": "string",
+                        "highestDDINumber": "string",
+                        "lowestDDINumber": "string",
+                        "statusCode": "string"
+                    }
+                ],
+                "minimumPeriod": "string",
+                "pbxChannels": [
+                    {
+                        "tariffCode": "string",
+                        "pbxSuffix": "string",
+                        "pbxGroupName": "string",
+                        "equipUid": "string",
+                        "installationAddress": {
+                            "informalAddress": "string",
+                            "extension": "string",
+                            "organizationName": "string",
+                            "pcode": "string",
+                            "streetNo": "string",
+                            "dpid": "string",
+                            "uid": "string",
+                            "streetName": "string",
+                            "networkNodeIds": [
+                                {
+                                    "ownerDeptCd": "string",
+                                    "available": "string",
+                                    "networkNodeUid": "string",
+                                    "nodeId": "string"
+                                }
+                            ],
+                            "externalAddressUid": "string",
+                            "flatNo": "string",
+                            "areaName": "string",
+                            "addressLookupKey": "string",
+                            "addressLine1": "string",
+                            "addressLine2": "string",
+                            "manuallyEditedYn": "string",
+                            "postCode": "string",
+                            "countryName": "string",
+                            "entrance": "string",
+                            "placeName": "string",
+                            "addressProfileUid": "string",
+                            "key": "string",
+                            "exchangeCode": "string"
+                        },
+                        "existingGroupAccessNo": "string"
+                    }
+                ],
+                "userDefinedFieldSet": [
+                    {
+                        "fieldName": "string",
+                        "hidden": "string",
+                        "available": "string",
+                        "fieldValue": {
+                            "dateValue": "string",
+                            "variantType": "string",
+                            "stringValue": "string",
+                            "currencyValue": {
+                                "itemised": "string",
+                                "id": "string",
+                                "value": "string"
+                            },
+                            "intValue": "string",
+                            "booleanValue": "string",
+                            "doubleValue": "string"
+                        },
+                        "key": "string"
+                    }
+                ],
+                "accessNo": {
+                    "isPbx": "string",
+                    "exDirectory": "string",
+                    "pbxQuantity": "string",
+                    "pbxSx": "string",
+                    "accessNo": "string"
+                },
+                "gsmSupplementItem": {
+                    "accessControl": "string",
+                    "handsetNo": "string",
+                    "puk": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "transportKappli": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "pin2": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "imsi": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "iccid": "string",
+                    "password": "string",
+                    "pin": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "algsel": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "customerId": "string",
+                    "puk2": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "ki": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "kappli3": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "kappli2": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "kappli1": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "handsetTypeCode": "string",
+                    "homeZone": "string",
+                    "adm3": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "adm2": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "adm4": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "prepaid": "string",
+                    "adm1": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "transportKey": {
+                        "restricted": "string",
+                        "value": "string"
+                    },
+                    "mailbox": "string",
+                    "imei": "string",
+                    "simNo": {
+                        "restricted": "string",
+                        "value": "string"
+                    }
+                },
+                "lineTypeCode": "string",
+                "contentLock": "string",
+                "methodCode": "string",
+                "networkNodeDescription": "string",
+                "leasedLineSupplementItem": {
+                    "lineSerialNumber": "string",
+                    "countryCdAEnd": "string",
+                    "countryCdBEnd": "string",
+                    "contactName": "string",
+                    "contractNo": "string",
+                    "circuitType": "string",
+                    "lineLength": "string",
+                    "customerName": "string",
+                    "signallingCode": "string",
+                    "leasedLineBEndAddress": {
+                        "informalAddress": "string",
+                        "extension": "string",
+                        "organizationName": "string",
+                        "pcode": "string",
+                        "streetNo": "string",
+                        "dpid": "string",
+                        "uid": "string",
+                        "streetName": "string",
+                        "networkNodeIds": {
+                            "ownerDeptCd": "string",
+                            "available": "string",
+                            "networkNodeUid": "string",
+                            "nodeId": "string"
+                        },
+                        "externalAddressUid": "string",
+                        "flatNo": "string",
+                        "areaName": "string",
+                        "addressLookupKey": "string",
+                        "addressLine1": "string",
+                        "addressLine2": "string",
+                        "manuallyEditedYn": "string",
+                        "postCode": "string",
+                        "countryName": "string",
+                        "entrance": "string",
+                        "placeName": "string",
+                        "addressProfileUid": "string",
+                        "key": "string",
+                        "exchangeCode": "string"
+                    },
+                    "lengthUnit": "string",
+                    "specificationCode": "string",
+                    "circuitName": "string",
+                    "contactNo": "string"
+                },
+                "equipUid": "string",
+                "communityName": "string",
+                "installationAddress": {
+                    "informalAddress": "string",
+                    "extension": "string",
+                    "organizationName": "string",
+                    "pcode": "string",
+                    "streetNo": "string",
+                    "dpid": "string",
+                    "uid": "string",
+                    "streetName": "string",
+                    "networkNodeIds": {
+                        "ownerDeptCd": "string",
+                        "available": "string",
+                        "networkNodeUid": "string",
+                        "nodeId": "string"
+                    },
+                    "externalAddressUid": "string",
+                    "flatNo": "string",
+                    "areaName": "string",
+                    "addressLookupKey": "string",
+                    "addressLine1": "string",
+                    "addressLine2": "string",
+                    "manuallyEditedYn": "string",
+                    "postCode": "string",
+                    "countryName": "string",
+                    "entrance": "string",
+                    "placeName": "string",
+                    "addressProfileUid": "string",
+                    "key": "string",
+                    "exchangeCode": "string"
+                },
+                "serviceDiscounts": [
+                    {
+                        "discountEndDate": "string",
+                        "discountName": "string",
+                        "netAmount": {
+                            "itemised": "string",
+                            "id": "string",
+                            "value": "string"
+                        },
+                        "grossAmount": {
+                            "itemised": "string",
+                            "id": "string",
+                            "value": "string"
+                        },
+                        "taxAmount": {
+                            "itemised": "string",
+                            "id": "string",
+                            "value": "string"
+                        },
+                        "taxCode": "string",
+                        "discountStartDate": "string",
+                        "periodicityOfDiscount": "string"
+                    }
+                ],
+                "assocServices": [
+                    {
+                        "charges": {
+                            "billingFrequency": "string",
+                            "netAmount": {
+                                "itemised": "string",
+                                "id": "string",
+                                "value": "string"
+                            },
+                            "isTaxInclusive": "string",
+                            "thirdPartyCode": "string",
+                            "statusCd": "string",
+                            "grossAmount": {
+                                "itemised": "string",
+                                "id": "string",
+                                "value": "string"
+                            },
+                            "chargeUid": "string",
+                            "suffix": "string",
+                            "taxAmount": {
+                                "itemised": "string",
+                                "id": "string",
+                                "value": "string"
+                            },
+                            "tppUid": "string",
+                            "lineLength": "string",
+                            "version": "string"
+                        },
+                        "tariffCode": "string",
+                        "equipUid": "string",
+                        "accessNo": {
+                            "isPbx": "string",
+                            "exDirectory": "string",
+                            "pbxQuantity": "string",
+                            "pbxSx": "string",
+                            "accessNo": "string"
+                        },
+                        "imsi": "string",
+                        "installationAddress": {
+                            "informalAddress": "string",
+                            "extension": "string",
+                            "organizationName": "string",
+                            "pcode": "string",
+                            "streetNo": "string",
+                            "dpid": "string",
+                            "uid": "string",
+                            "streetName": "string",
+                            "networkNodeIds": {
+                                "ownerDeptCd": "string",
+                                "available": "string",
+                                "networkNodeUid": "string",
+                                "nodeId": "string"
+                            },
+                            "externalAddressUid": "string",
+                            "flatNo": "string",
+                            "areaName": "string",
+                            "addressLookupKey": "string",
+                            "addressLine1": "string",
+                            "addressLine2": "string",
+                            "manuallyEditedYn": "string",
+                            "postCode": "string",
+                            "countryName": "string",
+                            "entrance": "string",
+                            "placeName": "string",
+                            "addressProfileUid": "string",
+                            "key": "string",
+                            "exchangeCode": "string"
+                        },
+                        "enhance": "string",
+                        "statusCode": "string"
+                    }
+                ],
+                "key": "string",
+                "roamingOption": "string",
+                "creditProfile": "string",
+                "oldAccountNumber": "string",
+                "recover": "string",
+                "billingRelations": "string",
+                "numberTypeCode": "string",
+                "referenceNo": "string",
+                "numberRangeTypeCode": "string",
+                "serviceContinuation": [
+                    {
+                        "seqNo": "string",
+                        "equipUid": "string",
+                        "serviceUid": "string",
+                        "woNo": "string"
+                    }
+                ],
+                "minimumPeriodExpiry": "string",
+                "serviceCover": {
+                    "coverNo": "string",
+                    "supportContract": {
+                        "contractNo": "string",
+                        "contractVer": "string"
+                    }
+                },
+                "serviceLevel": "string",
+                "serviceName": "string",
+                "externalReference": "string",
+                "networkNodeId": {
+                    "ownerDeptCd": "string",
+                    "available": "string",
+                    "networkNodeUid": "string",
+                    "nodeId": "string"
+                },
+                "costingEndDate": "string",
+                "initialInstallationDate": "string",
+                "relations": "string",
+                "unbilledUsage": {
+                    "itemised": "string",
+                    "id": "string",
+                    "value": "string"
+                },
+                "statusCode": "string"
+            },
+            "context": {
+                "contextElements": [
+                    {
+                        "name": "string",
+                        "value": {
+                            "dateValue": "string",
+                            "variantType": "string",
+                            "stringValue": "string",
+                            "currencyValue": {
+                                "itemised": "string",
+                                "id": "string",
+                                "value": "string"
+                            },
+                            "intValue": "string",
+                            "booleanValue": "string",
+                            "doubleValue": "string"
+                        }
+                    }
+                ],
+                "level": "string"
+            },
+            "messages": [
+                {
+                    "messageResourceId": "string",
+                    "messageSubstitutions": [
+                        "string"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "primaryContactAssociation": {
+                "isLocked": "string",
+                "primaryContact": "string",
+                "reasonCode": "string",
+                "contactAssociationUid": "string",
+                "key": "string"
+            }
+        },
+        "status": {
+            "code": "string",
+            "message": "string"
+        }
+    },
+    "serviceStatus": {
+        "fixedLine": {
+            "msg": "string",
+            "serviceNumber": "string",
+            "outstandingAmount": "string",
+            "salesco": "string",
+            "status": "string"
+        },
+        "mobile": {
+            "msg": "string",
+            "subscriberType": "string",
+            "subscriberStatus": "string",
+            "postpaid": {
+                "outstandingAmount": "string"
+            },
+            "prepaid": {
+                "balance": [
+                    {
+                        "mainBalance": "string",
+                        "offerID": "string"
+                    },
+                    {
+                        "voiceBalance": "string",
+                        "offerID": "string"
+                    },
+                    {
+                        "smsBalance": "string",
+                        "offerID": "string"
+                    },
+                    {
+                        "offerID": "string",
+                        "dataBalance": "string"
+                    },
+                    {
+                        "voiceBalance": "string",
+                        "mainBalance": "string",
+                        "offerID": "string",
+                        "smsBalance": "string",
+                        "dataBalance": "string"
+                    }
+                ]
+            }
+        }
+    }
+}

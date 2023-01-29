@@ -1,0 +1,842 @@
+{
+    "openapi": "3.0.0",
+    "servers": [{
+        "url": "http://localhost:4000"
+    }],
+    "info": {
+        "description": "This an All in one sysytem Application by Comquest",
+        "version": "1.0.0",
+        "title": "All in one system",
+        "termsOfService": "",
+        "contact": {
+            "email": "email@email.email"
+        },
+        "license": {
+            "name": "All in one system 1.0",
+            "url": "https://tbd@tbd.tbd/terms"
+        }
+    },
+    "tags": [{
+        "name": "All in one system ",
+        "description": "All in one system ",
+        "externalDocs": {
+            "description": "Find out more",
+            "url": "https://www.comquest-brunei.com/about-us.html"
+        }
+    }],
+    "paths": {
+        "/api/poc": {
+            "post": {
+                "tags": [
+                    "poc"
+                ],
+                "summary": "POC for ajv validator",
+                "description": "",
+                "operationId": "poc",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/poc-schema"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validation-errors"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "You are not logged in"
+                    }
+                }
+            }
+        },
+        "/api/users/login": {
+            "post": {
+                "tags": [
+                    "login"
+                ],
+                "summary": "Logs in to the application",
+                "description": "",
+                "operationId": "Login",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Login"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LoggedInUser"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Incorrect username or password"
+                    }
+                }
+            }
+        },
+        "/api/config": {
+            "post": {
+                "tags": [
+                    "appConfig"
+                ],
+                "summary": "Creating data into app-config table",
+                "description": "",
+                "operationId": "createConfig",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "security": [{
+                    "bearerAuth": []
+                }],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AppConfig"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AppConfig"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "User Not Found"
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "appConfig"
+                ],
+                "summary": "Get the data from app-config ",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "getConfig",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "security": [{
+                    "bearerAuth": []
+                }],
+                "parameters": [{
+                    "name": "name",
+                    "in": "query",
+                    "description": "application name",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AppConfig"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid user supplied"
+                    },
+                    "401": {
+                        "description": "User not authorized"
+                    }
+                }
+            }
+        },
+        "/api/users/logout/{id}": {
+            "delete": {
+                "tags": [
+                    "logout"
+                ],
+                "summary": "Logout the application",
+                "description": "",
+                "operationId": "Logout",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "security": [{
+                    "bearerAuth": []
+                }],
+                "parameters": [{
+                    "name": "id",
+                    "in": "path",
+                    "description": "User id",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LoggedInUser"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "User not found"
+                    }
+                }
+            }
+        },
+        "/api/customer": {
+            "post": {
+                "tags": [
+                    "create customer"
+                ],
+                "summary": "create new  in to the application",
+                "description": "",
+                "operationId": "CreateCustomer",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "security": [{
+                    "bearerAuth": []
+                }],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Customer"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Customer"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Error while creating customer"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "validation-errors": {
+                "type": "array",
+                "items": {
+                    "properties": {
+                        "attribute": {
+                            "type": "string"
+                        },
+                        "message": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "poc-schema": {
+                "title": "pocSchema",
+                "type": "object",
+                "properties": {
+                    "customerType": {
+                        "type": "string"
+                    },
+                    "surname": {
+                        "type": "string",
+                        "minLength": 3
+                    },
+                    "forename": {
+                        "type": "string",
+                        "minLength": 3
+                    },
+                    "companyName": {
+                        "type": "string",
+                        "minLength": 3
+                    }
+                },
+                "allOf": [{
+                        "if": { "properties": { "customerType": { "const": "residential" } } },
+                        "then": { "required": ["surname", "forename"] }
+                    },
+                    {
+                        "if": { "properties": { "customerType": { "const": "business" } } },
+                        "then": { "required": ["companyName"] }
+                    }
+                ]
+            },
+            "Login": {
+                "type": "object",
+                "properties": {
+                    "userName": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email"
+                    },
+                    "password": {
+                        "type": "string",
+                        "pattern": "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
+                    }
+                },
+                "required": ["userName", "email", "password"]
+            },
+            "Security": {
+                "type": "object",
+                "properties": {
+                    "securityQuestion": {
+                        "type": "string"
+                    },
+                    "securityAnswer": {
+                        "type": "string"
+                    }
+
+                }
+            },
+            "Customer": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email"
+                    },
+                    "firstName": {
+                        "type": "string",
+                        "minLength": 3
+                    },
+                    "lastName": {
+                        "type": "string",
+                        "minLength": 3
+                    },
+                    "gender": {
+                        "type": "string"
+                    },
+                    "dob": {
+                        "type": "date",
+                        "format": "date"
+                    },
+                    "custType": {
+                        "type": "string"
+                    },
+                    "companyName": {
+                        "type": "string",
+                        "minLength": 3
+                    },
+                    "registerNo": {
+                        "type": "string"
+                    },
+                    "idType": {
+                        "type": "string"
+                    },
+                    "idValue": {
+                        "type": "string"
+                    },
+                    "contactId": {
+                        "type": "string"
+                    },
+
+                    "donotemail": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+
+                    "custAddress": {
+                        "type": "object",
+                        "items": {
+                            "$ref": "#/components/schemas/Address"
+                        }
+                    },
+                    "Accounts": {
+                        "type": "object",
+                        "$ref": "#/components/schemas/Account",
+                        "properties": {
+                            "billingAddress": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/Address"
+                            },
+                            "billingOptions": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/billOptions"
+                            },
+                            "Security": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/Security"
+                            },
+                            "Service": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/service"
+                            }
+                        }
+                    }
+                },
+                "allOf": [{
+                        "if": { "properties": { "customerType": { "const": "residential" } } },
+
+                        "then": { "required": ["firstName", "lastName"] }
+                    },
+                    {
+                        "if": { "properties": { "customerType": { "const": "business" } } },
+                        "then": { "required": ["companyName"] }
+                    }
+                ]
+            },
+            "LoggedInUser": {
+                "type": "object",
+                "properties": {
+                    "user": {
+                        "type": "object",
+                        "properties": {
+                            "userId": {
+                                "type": "integer"
+                            },
+                            "firstName": {
+                                "type": "string"
+                            },
+                            "lastName": {
+                                "type": "string"
+                            },
+                            "email": {
+                                "type": "string"
+                            },
+                            "locale": {
+                                "type": "string"
+                            },
+                            "photo": {
+                                "type": "string"
+                            },
+                            "gender": {
+                                "type": "string"
+                            },
+                            "dob": {
+                                "type": "string"
+                            },
+                            "loginid": {
+                                "type": "string"
+                            }
+                        },
+                        "required": ["userId", "firstName", "lastName", "gender", "loginid"]
+                    },
+                    "accessToken": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Contact": {
+                "type": "object",
+                "properties": {
+                    "contactId": {
+                        "type": "integer"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "firstName": {
+                        "type": "string",
+                        "minLength": 3
+                    },
+                    "lastName": {
+                        "type": "string",
+                        "minLength": 3
+                    },
+                    "contactType": {
+                        "type": "string",
+                        "minLength": 3
+                    },
+                    "contactNo": {
+                        "type": "integer",
+                        "pattern": "^[0-9]{10}$"
+                    },
+                    "contactNoPfx": {
+                        "type": "integer"
+
+                    },
+                    "altContactNo1": {
+                        "type": "integer",
+                        "pattern": "^[0-9]{10}$"
+                    },
+                    "altContactNo2": {
+                        "type": "integer",
+                        "pattern": "^[0-9]{10}$"
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email"
+                    },
+                    "altEmail": {
+                        "type": "string",
+                        "format": "email"
+                    },
+                    "status": {
+                        "type": "string"
+                    }
+                },
+                "required": ["contactId", "firstName", "lastName", "contactType", "contactNo", "title"]
+            },
+            "Account": {
+                "type": "object",
+                "properties": {
+                    "accountId": {
+                        "type": "string"
+                    },
+                    "accountCat": {
+                        "type": "string"
+                    },
+                    "accountClass": {
+                        "type": "string"
+                    },
+                    "accountPriority": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "firstName": {
+                        "type": "string",
+                        "minLength": 3
+                    },
+                    "lastName": {
+                        "type": "string",
+                        "minLength": 3
+                    },
+                    "gender": {
+                        "type": "string"
+                    },
+                    "dob": {
+                        "type": "date",
+                        "format": "date"
+                    },
+                    "registerNo": {
+                        "type": "string"
+                    },
+                    "idType": {
+                        "type": "string"
+                    },
+                    "customerId": {
+                        "type": "string"
+                    },
+                    "accountNo": {
+                        "type": "string",
+                        "pattern": "[0-9]{9,18}"
+                    },
+
+                    "contactId": {
+                        "type": "string"
+                    },
+                    "addressId": {
+                        "type": "string"
+                    },
+                    "baseCollPlan": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+
+                    }
+                },
+                "required": ["accountId", "accountCat", "accountClass", "accountPriority", "firstName", "lastName", "title", "gender", "dob", "idType", "customerId", "accountNo"]
+            },
+            "Address": {
+                "type": "object",
+                "properties": {
+                    "addressId": {
+                        "type": "integer"
+                    },
+                    "addressType": {
+                        "type": "string"
+                    },
+                    "hno": {
+                        "type": "string"
+                    },
+                    "block": {
+                        "type": "string"
+                    },
+                    "buildingName": {
+                        "type": "string"
+                    },
+                    "street": {
+                        "type": "string"
+                    },
+                    "road": {
+                        "type": "string"
+                    },
+                    "city": {
+                        "type": "string"
+                    },
+                    "town": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "district": {
+                        "type": "string"
+                    },
+                    "country": {
+                        "type": "string"
+                    },
+                    "latitude": {
+                        "type": "string"
+                    },
+                    "longitude": {
+                        "type": "string"
+                    },
+                    "postCode": {
+                        "type": "string"
+                    },
+                    "zone": {
+                        "type": "string"
+                    }
+                }
+            },
+            "billOptions": {
+                "type": "object",
+                "properties": {
+                    "billLanguage": {
+                        "type": "string"
+                    },
+
+                    "billDeliveryMethod": {
+                        "type": "string"
+                    },
+
+                    "noOfCopies": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "Billing": {
+                "type": "object",
+                "properties": {
+                    "billId": {
+                        "type": "integer"
+                    },
+                    "connectionId": {
+                        "type": "string"
+                    },
+                    "accountId": {
+                        "type": "string"
+                    },
+                    "addressId": {
+                        "type": "string"
+                    },
+                    "customerId": {
+                        "type": "string"
+                    },
+                    "billLang": {
+                        "type": "string"
+                    },
+                    "billDeliveryMthd": {
+                        "type": "string"
+                    },
+                    "noOfCopies": {
+                        "type": "integer"
+                    },
+                    "status": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Deposite": {
+                "type": "object",
+                "properties": {
+                    "charge": {
+                        "type": "string"
+                    },
+
+                    "paymentMethod": {
+                        "type": "string"
+                    },
+
+                    "excludeReason": {
+                        "type": "string"
+                    }
+                }
+            },
+            "service": {
+                "type": "object",
+                "properties": {
+                    "catlog": {
+                        "type": "string"
+                    },
+
+                    "product": {
+                        "type": "string"
+                    },
+
+                    "serviceAddress": {
+                        "type": "object",
+                        "$ref": "#/components/schemas/Address"
+                    },
+                    "fixed": {
+                        "type": "object",
+                        "properties": {
+                            "serviceNbrSelection": {
+                                "type": "string"
+                            },
+                            "serviceNbrGroup": {
+                                "type": "string"
+                            },
+                            "exchangeCode": {
+                                "type": "integer"
+                            },
+                            "accessNbr": {
+                                "type": "integer"
+                            }
+
+                        }
+                    },
+                    "Mobile": {
+                        "type": "object",
+                        "properties": {
+                            "serviceNbrSelection": {
+                                "type": "string"
+                            },
+                            "dealership": {
+                                "type": "string"
+                            },
+                            "nbrGroup": {
+                                "type": "string"
+                            },
+                            "accessNbr": {
+                                "type": "string"
+                            },
+                            "gsm": {
+                                "type": "object",
+                                "properties": {
+                                    "iccid": {
+                                        "type": "integer"
+                                    },
+                                    "imsi": {
+                                        "type": "integer"
+                                    },
+                                    "creditProfile": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "Deposite": {
+                        "type": "object",
+                        "$ref": "#/components/schemas/Deposite"
+
+                    }
+                }
+            },
+            "AppConfig": {
+                "type": "object",
+                "properties": {
+                    "appName": {
+                        "type": "string"
+                    },
+                    "image": {
+                        "type": "string"
+                    },
+                    "config": {
+                        "type": "string"
+                    }
+                }
+            },
+            "count": {
+                "type": "array",
+                "items": {
+                    "properties": {
+                        "count": {
+                            "type": "integer",
+                            "required": true
+                        }
+                    }
+                }
+            },
+            "ArrayResponse": {
+                "type": "array",
+                "items": {
+                    "properties": {}
+                }
+            },
+            "EmptyResponse": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "authorization"
+            }
+        }
+    },
+    "externalDocs": {
+        "description": "Find out more about the application",
+        "url": "https://tbd@tbd.tbd/about"
+    }
+}

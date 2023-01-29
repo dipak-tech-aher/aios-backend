@@ -1,0 +1,463 @@
+{
+    "openapi": "3.0.0",
+    "servers": [
+        {
+            "url": "http://localhost:4000"
+        }
+    ],
+    "info": {
+        "description": "This an All in one sysytem Application by Comquest",
+        "version": "1.0.0",
+        "title": "All in one system",
+        "termsOfService": "",
+        "contact": {
+            "email": "email@email.email"
+        },
+        "license": {
+            "name": "All in one system 1.0",
+            "url": "https://tbd@tbd.tbd/terms"
+        }
+    },
+    "tags": [
+        {
+            "name": "All in one system ",
+            "description": "All in one system ",
+            "externalDocs": {
+                "description": "Find out more",
+                "url": "https://www.comquest-brunei.com/about-us.html"
+            }
+        }
+    ],
+    "paths": {
+        "/api/poc": {
+            "post": {
+                "tags": [
+                    "poc"
+                ],
+                "summary": "POC for ajv validator",
+                "description": "",
+                "operationId": "poc",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/poc-schema"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validation-errors"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "You are not logged in"
+                    }
+                }
+            }
+        },        
+        "/api/users/login": {
+            "post": {
+                "tags": [
+                    "login"
+                ],
+                "summary": "Logs in to the application",
+                "description": "",
+                "operationId": "Login",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Login"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LoggedInUser"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Incorrect username or password"
+                    }
+                }
+            }
+        },
+        "/api/config": {
+            "post": {
+                "tags": [
+                    "appConfig"
+                ],
+                "summary": "Creating data into app-config table",
+                "description": "",
+                "operationId": "createConfig",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AppConfig"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AppConfig"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "User Not Found"
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "appConfig"
+                ],
+                "summary": "Get the data from app-config ",
+                "description": "This can only be done by the logged in user.",
+                "operationId": "getConfig",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "application name",
+                        "required": true,
+                         "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AppConfig"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid user supplied"
+                    },
+                    "401": {
+                        "description": "User not authorized"
+                    }
+                }
+            }
+        },
+        "/api/users/logout/{id}": {
+            "delete": {
+                "tags": [
+                    "logout"
+                ],
+                "summary": "Logout the application",
+                "description": "",
+                "operationId": "Logout",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LoggedInUser"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "User not found"
+                    }
+                }
+            }
+        },
+        "/api/customer": {
+            "post": {
+                "tags": [
+                    "create customer"
+                ],
+                "summary": "create new  in to the application",
+                "description": "",
+                "operationId": "CreateCustomer",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Customer"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Customer"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Error while creating customer"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "validation-errors": {
+                "type": "array",
+                "items": {
+                    "properties": {
+                        "attribute": {
+                            "type": "string"
+                        },
+                        "message": {
+                            "type": "string"
+                        }
+                    }
+                }            
+            },
+            "poc-schema": {
+                "title": "pocSchema",
+                "type": "object",
+                "properties": {
+                    "customerType": {
+                        "type": "string"
+                    },
+                    "surname": {
+                        "type": "string",
+                        "minLength": 3
+                    },
+                    "forename": {
+                        "type": "string",
+                        "minLength": 3
+                    },
+                    "companyName": {
+                        "type": "string",
+                        "minLength": 3
+                    }
+                },
+                "allOf": [
+                    {
+                        "if": {"properties": {"customerType": {"const": "residential"}}},
+                        "then": {"required": ["surname", "forename"]}
+                    },
+                    {
+                        "if": {"properties": {"customerType": {"const": "business"}}},
+                        "then": {"required": ["companyName"]}
+                    }
+                ]
+            },
+            "Login": {
+                "type": "object",
+                "properties": {
+                    "userName": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Customer": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    },
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "type": "string"
+                    }
+                }
+            },
+            "LoggedInUser": {
+                "type": "object",
+                "properties": {
+                    "user": {
+                        "type": "object",
+                        "properties": {
+                            "userId": {
+                                "type": "integer"
+                            },
+                            "firstName": {
+                                "type": "string"
+                            },
+                            "lastName": {
+                                "type": "string"
+                            },
+                            "email": {
+                                "type": "string"
+                            },
+                            "locale": {
+                                "type": "string"
+                            },
+                            "photo": {
+                                "type": "string"
+                            },
+                            "gender": {
+                                "type": "string"
+                            },
+                            "dob": {
+                                "type": "string"
+                            },
+                            "loginid": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "accessToken": {
+                        "type": "string"
+                    }
+                }
+            },
+            "AppConfig": {
+               "type": "object",
+            "properties": {
+                "appName": {
+                    "type": "string"
+                },
+                "image": {
+                    "type": "string"
+                },
+                "config": {
+                    "type": "string"
+                }
+            }
+            },
+            "count": {
+                "type": "array",
+                "items": {
+                    "properties": {
+                        "count": {
+                            "type": "integer",
+                            "required": true
+                        }
+                    }
+                }
+            },
+            "ArrayResponse": {
+                "type": "array",
+                "items": {
+                    "properties": {}
+                }
+            },
+            "EmptyResponse": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "authorization"
+            }
+        }
+    },
+    "externalDocs": {
+        "description": "Find out more about the application",
+        "url": "https://tbd@tbd.tbd/about"
+    }
+}
